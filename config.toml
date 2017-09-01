@@ -1,0 +1,4 @@
+baseURL = "http://docs.avo.la"
+languageCode = "en-us"
+title = "Avola Docs"
+theme = "docdock"
