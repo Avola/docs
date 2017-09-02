@@ -1,7 +1,7 @@
 baseURL = "http://docs.avo.la"
 languageCode = "en-us"
 title = "Avola Docs"
-theme = "hugo-material-docs"
+theme = "hyde"
 metadataformat = "yaml"
 canonifyurls = true
 # Enable Google Analytics by entering your tracking id
