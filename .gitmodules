@@ -1,3 +1,6 @@
 [submodule "themes/hugo-material-docs"]
 	path = themes/hugo-material-docs
 	url = https://github.com/digitalcraftsman/hugo-material-docs
+[submodule "themes/avola-hugo-material-docs"]
+	path = themes/avola-hugo-material-docs
+	url = https://github.com/Avola/hugo-material-docs
