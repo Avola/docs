@@ -1,7 +1,7 @@
 baseURL = "http://avola-docs.azurewebsites.net/"
 languageCode = "en-us"
 title = "Avola Docs"
-theme = "avola-hugo-material-docs"
+theme = "hugo-material-docs"
 metadataformat = "yaml"
 canonifyurls = true
 # Enable Google Analytics by entering your tracking id
