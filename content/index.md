@@ -1,10 +1,8 @@
 ---
 date: 2017-09-01T21:07:13+01:00
-title: Avola Docs Home
+title: Avola API Documentation
 type: index
-weight: 0
 ---
 
-## Some Avola documentation
+These pages will help you connect your applications to [Avola Decision](http://www.avo.la)
 
-Here we go!
