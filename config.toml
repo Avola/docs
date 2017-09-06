@@ -1,55 +1,43 @@
 baseURL = "http://avola-docs.azurewebsites.net/"
 languageCode = "en-us"
-title = "Avola API Documentation"
-theme = "hugo-material-docs"
+title = "Avola Documentation"
+theme = "hugo-theme-docdock"
 metadataformat = "yaml"
 canonifyurls = true
 # Enable Google Analytics by entering your tracking id
 googleAnalytics = ""
 
 [params]
-	# General information
-	# author = "Avola Decision"
-	description = "Documentation for the Avola API"
-	copyright = "Released under the MIT license"
+editURL = "https://github.com/Avola/docs/tree/master/content/"
+noHomeIcon = false # default is false
+noSearch = false # default is false
+showVisitedLinks = true # default is false
+# themeStyle = "theme" # overide base css
+themeVariant = "blue" # choose theme variant "green", "gold" , "gray", "blue" (default)
+ordersectionsby = "weight" # ordersectionsby = "title"
 
-	# Repository (adds links in sidebar)
-	# provider = "GitHub"
-	# repo_url = "https://github.com/avola/avola-client"
-
-	# version = "1.0.0"
-	logo = "images/avola-logo-bol.png"
-	favicon = ""
-
-	permalink = "#"
-
-	# Custom assets
-	custom_css = []
-	custom_js  = []
-
-	# Syntax highlighting theme
-	highlight_css  = ""
-
-	[params.palette]
-    	primary = "grey"
-    	accent  = "teal"
-
-    [params.font]
-    	text = "Ubuntu"
-    	code = "Ubuntu Mono"
-
-[social]
-	twitter = "avoladecision"
-	github  = "avola"
-	email   = "mail@avo.la"
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
 
 
-[[menu.main]]
-	name   = "Home"
-	url    = "/"
-	weight = 1
+[[menu.shortcuts]]
+pre = "<h3>More</h3>"
+name = "<i class='fa fa-github'></i> Github"
+identifier = "ds"
+url = "https://github.com/avola"
+weight = 10
 
-[[menu.main]]
-	name   = "API"
-	url    = "api/"
-	weight = 10
+# [[menu.shortcuts]]
+# name = "<i class='fa fa-camera'></i> Showcases"
+# url = "/showcase"
+# weight = 11
+
+[[menu.shortcuts]]
+name = "<i class='fa fa-twitter'></i> Twitter"
+url = "https://twitter.com/avoladecision"
+weight = 20
+
+[[menu.shortcuts]]
+name = "<i class='fa fa-external-link-square'></i> Avola Website"
+url = "http://www.avo.la"
+weight = 30
