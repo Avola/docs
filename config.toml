@@ -1,4 +1,4 @@
-baseURL = "http://avola-docs.azurewebsites.net/"
+baseURL = "https://docs.avo.la/"
 languageCode = "en-us"
 title = "Avola Documentation"
 theme = "hugo-theme-docdock"
