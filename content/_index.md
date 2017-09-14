@@ -7,5 +7,7 @@ type: index
 
 These pages will help you connect your applications to [Avola Decision](http://www.avo.la)
 
-* I work with Avola Decision. I design decisions
-* I'm a developer and I want to know how to integrate Avola
+What is your role?
+
+* I work with Avola Decision. I design decisions.
+* I'm a developer and I want to know how to integrate Avola in my onw applications
