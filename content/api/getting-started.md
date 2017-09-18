@@ -182,8 +182,14 @@ Authorization: Bearer TOKENSTRING
 }
 ```
 
-The service tries to reach a conclusion and returns a response. The response can contain multiple "HitConclusions", but for now, we are interested in the main one, it is the one with the BusinessDataId as specified in FinalConclusionBusinessDataId (here: 243)
-The value of our conclusion is "19.00", we have calculated our price.
+The service tries to reach a conclusion and returns a response. First thing to inspect is the "ConclusionValueType" which can have 3 possible values:
+
+**0: Success**, the decision returned a final conclusion, of which the BusinessDataId is specified in FinalConclusionBusinessDataId.
+The response can contain multiple "HitConclusions", but for now, we are interested in the main one, it is the one with the BusinessDataId as specified in FinalConclusionBusinessDataId (here: 243). The value of our conclusion is "19.00", we have calculated our price.
+
+**1: No Conclusion**, the decision could not reach a final conclusion. No rows were hit in the top level decision table. It is, however possible, that we have HitConclusion objects. These objects are conclusions from lower level tables.
+
+**2: Error**, in this case, there will be at least one object in the "Errors" array. You will receive an error, if you violate constraints, or for example, if you pass text data in a numeric input BusinessData
 
 ```json
 {
