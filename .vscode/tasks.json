@@ -1,0 +1,23 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "command": "cmd",
+    "tasks": [
+        {
+            "taskName": "echo",
+            "type": "shell",
+            "command": "echo Hello"
+        },
+        {
+            "taskName": "Generate Swagger Markdown",
+            "type": "shell",
+            //"suppressTaskName": true,
+            //"isBuildCommand": false,
+            //"isTestCommand": false,
+            "command": ".\\node_modules\\.bin\\swagger-markdown",
+            "args": ["-i", "swagger-yaml-client/swagger.yaml"]
+            //"showOutput": "always"
+        }
+    ]
+}

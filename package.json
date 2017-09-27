@@ -1,0 +1,23 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "Avola technical documentation",
+  "main": "index.js",
+  "dependencies": {
+    "swagger-markdown": "^1.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Avola/docs.git"
+  },
+  "author": "Bart Dupon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Avola/docs/issues"
+  },
+  "homepage": "https://github.com/Avola/docs#readme"
+}
