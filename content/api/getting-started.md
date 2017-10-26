@@ -50,40 +50,64 @@ Content-Type: application/json
 Authorization: Bearer TOKENSTRING
 ```
 
-This will you return you a list of decision services, each with a list of decision service versions. The example response below has one decision service (id 16), with one version (number 1). In the version you find the expected input data (BusinessDataId's 244 and 245). This is all the information you need to execute the decision service.
+This will you return you a list of decision services, each with a list of decision service versions. The example response below has one decision service (id 33), with one version (number 1). In the version you find the expected input data (BusinessDataId's 472 and 473). This is all the information you need to execute the decision service.
 
 {{%expand "Click to expand the full example json for a list of decisions" %}}
 ```json
 [
   {
-    "DecisionServiceId": 16,
+    "DecisionServiceId": 33,
     "Name": "Price",
     "Versions": [
       {
-        "DecisionServiceId": 16,
+        "DecisionServiceId": 33,
         "Name": "Price - Version 1",
-        "DecisionServiceVersionId": 25,
+        "DecisionName": null,
+        "DecisionServiceVersionId": 45,
         "VersionNumber": 1,
         "InputData": [
           {
-            "BusinessDataId": 245,
+            "BusinessDataId": 472,
             "Version": 1,
-            "Name": "Food Type",
+            "Name": "Item Type",
             "Type": "ListData",
             "Question": null,
             "Properties": [
               {
                 "Name": "ValueListId",
-                "Value": "43"
+                "Value": "72"
               }
             ]
           },
           {
-            "BusinessDataId": 244,
+            "BusinessDataId": 473,
             "Version": 1,
-            "Name": "Weight",
+            "Name": "Sale Date",
+            "Type": "DateTimeData",
+            "Question": null,
+            "Properties": [
+              {
+                "Name": "MaximumDatetimeValue",
+                "Value": ""
+              },
+              {
+                "Name": "MinimumDatetimeValue",
+                "Value": ""
+              },
+              {
+                "Name": "DateTimePrecision",
+                "Value": "Seconds"
+              }
+            ]
+          }
+        ],
+        "OutputData": [
+          {
+            "BusinessDataId": 471,
+            "Version": 1,
+            "Name": "Price",
             "Type": "DecimalNumberData",
-            "Question": "What is the weight in kg?",
+            "Question": null,
             "Properties": [
               {
                 "Name": "MaximumDecimalValue",
@@ -100,49 +124,30 @@ This will you return you a list of decision services, each with a list of decisi
             ]
           }
         ],
-        "OutputData": [
-          {
-            "BusinessDataId": 243,
-            "Version": 1,
-            "Name": "Price",
-            "Type": "CurrencyData",
-            "Question": "What is the price?",
-            "Properties": [
-              {
-                "Name": "IsoCode",
-                "Value": "EUR"
-              },
-              {
-                "Name": "Sign",
-                "Value": "€"
-              }
-            ]
-          }
-        ],
         "TraceData": [],
         "MetaData": [],
         "PairData": [],
         "ListData": [
           {
-            "ListId": 43,
+            "ListId": 72,
             "Items": [
               {
-                "Id": 443,
+                "Id": 562,
                 "Order": 0,
-                "Value": "Cheese",
-                "Name": "Cheese"
+                "Value": "Food",
+                "Name": "Food"
               },
               {
-                "Id": 444,
+                "Id": 563,
                 "Order": 0,
-                "Value": "Nuts",
-                "Name": "Nuts"
+                "Value": "Drinks",
+                "Name": "Drinks"
               },
               {
-                "Id": 445,
+                "Id": 564,
                 "Order": 0,
-                "Value": "Fruit",
-                "Name": "Fruit"
+                "Value": "Clothes",
+                "Name": "Clothes"
               }
             ]
           }
@@ -165,17 +170,17 @@ Content-Type: application/json
 Authorization: Bearer TOKENSTRING
 
 {
-  "DecisionServiceId": 16,
+  "DecisionServiceId": 33,
   "VersionNumber": 1,
   "Reference": "MyReference",
   "ExecutionRequestData": [
     {
-      "Key": 245,
-      "Value": "Cheese"
+      "Key": 472,
+      "Value": "Food"
     },
     {
-      "Key": 244,
-      "Value": "5"
+      "Key": 473,
+      "Value": "2017-04-25 13:21:59"
     }
   ],
   "ExecutionRequestMetaData": [  ]
@@ -185,7 +190,7 @@ Authorization: Bearer TOKENSTRING
 The service tries to reach a conclusion and returns a response. First thing to inspect is the "ConclusionValueType" which can have 3 possible values:
 
 **0: Success**, the decision returned a final conclusion, of which the BusinessDataId is specified in FinalConclusionBusinessDataId.
-The response can contain multiple "HitConclusions", but for now, we are interested in the main one, it is the one with the BusinessDataId as specified in FinalConclusionBusinessDataId (here: 243). The value of our conclusion is "19.00", we have calculated our price.
+The response can contain multiple "HitConclusions", but for now, we are interested in the main one, it is the one with the BusinessDataId as specified in FinalConclusionBusinessDataId (here: 471). The value of our conclusion is "15.99", we have calculated our price.
 
 **1: No Conclusion**, the decision could not reach a final conclusion. No rows were hit in the top level decision table. It is, however possible, that we have HitConclusion objects. These objects are conclusions from lower level tables.
 
@@ -193,24 +198,24 @@ The response can contain multiple "HitConclusions", but for now, we are interest
 
 ```json
 {
-  "DecisionTableId": 102,
-  "DecisionServiceId": 16,
+  "DecisionTableId": 203,
+  "DecisionServiceId": 33,
   "Reference": "MyReference",
   "FinalConclusionBusinessDataIds": [
-    243
+    471
   ],
   "ConclusionValueType": 0,
   "HitConclusions": [
     {
       "ConclusionName": "Price",
-      "ConclusionId": 102,
+      "ConclusionId": 203,
       "DecisionTableName": "Price",
-      "DecisionTableId": 102,
-      "BusinessDataId": 243,
-      "RowId": 383,
-      "RowExpression": "Weight > 5.00 And Food Type = [Cheese]",
-      "Value": "19.00",
-      "RowOrder": 1
+      "DecisionTableId": 203,
+      "BusinessDataId": 471,
+      "RowId": 652,
+      "RowExpression": "error",
+      "Value": "15.99",
+      "RowOrder": 2
     }
   ],
   "Errors": []
