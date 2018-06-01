@@ -45,7 +45,7 @@ The response looks like this, save the token.
 ## Get a list of decision services
 
 ```json
-GET [endpoint]/api/ApiExecution/list HTTP/1.1
+GET [endpoint]/api/ApiExecution/decisions/list HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer TOKENSTRING
 ```
