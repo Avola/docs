@@ -20,7 +20,7 @@ If you have trouble with this, contact support to help you out.
 Avola works with an external authentication server, that issues tokens. So we need to call this first, before executing actual decisions.
 The token can be reused and has an expiration date.
 
-For the correct token endpoint, call [endpoint]/api/Settings - in the response you will find the [authority] and [tokenendpoint] you need.
+For the correct token endpoint, call [endpoint]/api/Settings - in the response you will find the [authority] and [tokenendpoint] you need. **Remark:** you don't need to put https:// in front of the [authority] endpoint, just the base url.
 
 Then, request a token, for the scope 'avola-api-client':
 
