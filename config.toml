@@ -1,6 +1,7 @@
 baseURL = "https://docs.avo.la/"
 languageCode = "en-us"
-title = "Avola Documentation"
+title = "Avola Decision Documentation"
+description = "Documentation pages for Avola Decision"
 theme = "hugo-theme-docdock"
 pygmentsCodeFences = true
 pygmentsStyle = "monokailight"
