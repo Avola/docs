@@ -1,3 +1,4 @@
-public/
+/public/*
+!/public/.gitkeep
 node_modules/
 swagger-yaml-client/

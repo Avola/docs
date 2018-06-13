@@ -2,6 +2,8 @@ baseURL = "https://docs.avo.la/"
 languageCode = "en-us"
 title = "Avola Documentation"
 theme = "hugo-theme-docdock"
+pygmentsCodeFences = true
+pygmentsStyle = "monokailight"
 metadataformat = "yaml"
 canonifyurls = true
 # Enable Google Analytics by entering your tracking id
@@ -9,28 +11,25 @@ googleAnalytics = ""
 
 [params]
 editURL = "https://github.com/Avola/docs/tree/master/content/"
-noHomeIcon = false # default is false
-noSearch = false # default is false
 showVisitedLinks = true # default is false
-# themeStyle = "theme" # overide base css
-themeVariant = "blue" # choose theme variant "green", "gold" , "gray", "blue" (default)
+themeStyle = "flex" # "original" or "flex" # default "flex"
+# themeVariant = "blue" # choose theme variant "green", "gold" , "gray", "blue" (default)
 ordersectionsby = "weight" # ordersectionsby = "title"
+disableHomeIcon = false # default is false
+disableSearch = false # default is false
+disableNavChevron = true # set true to hide next/prev chevron, default is false
+highlightClientSide = false # set true to use highlight.pack.js instead of the default hugo chroma highlighter
+menushortcutsnewtab = true # set true to open shortcuts links to a new tab/window
+enableGitInfo = true
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
-
 [[menu.shortcuts]]
-pre = "<h3>More</h3>"
 name = "<i class='fa fa-github'></i> Github"
 identifier = "ds"
 url = "https://github.com/avola"
 weight = 10
-
-# [[menu.shortcuts]]
-# name = "<i class='fa fa-camera'></i> Showcases"
-# url = "/showcase"
-# weight = 11
 
 [[menu.shortcuts]]
 name = "<i class='fa fa-twitter'></i> Twitter"
