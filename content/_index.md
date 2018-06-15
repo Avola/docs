@@ -1,13 +1,12 @@
 ---
 date: 2017-09-01T21:07:13+01:00
-title: Avola API Documentation
+title: Avola Decision Documentation
 type: index
 ---
-# Avola Decision Docs
+# Avola Decision Documentation
 
-These pages will help you connect your applications to [Avola Decision](http://www.avo.la)
+Welcome to the official [Avola Decision](https://www.avo.la) documentation site!
 
-What is your role?
+{{% alert theme="info" %}}If you are looking for support about the usage of the Avola Decision Modeler application, please use the [support portal](https://support.avo.la), or click the help "**(i)**" button in the modeler application.{{% /alert %}}
 
-* I work with Avola Decision. I design decisions.
-* I'm a developer and I want to know how to integrate Avola in my onw applications
+

@@ -1,19 +1,13 @@
 ---
-title: "Getting Started"
-date: 2017-09-06T15:05:17+02:00
-author: Bart Dupon
+title: "REST API"
+date: 2018-06-13T00:08:49+02:00
 draft: false
-weight: 5
+weight: 40
 ---
 
-## Prerequisites
-Before getting started, make sure hou have the following:
-  
-* An Avola environment. You received a custom swagger endpoint. I will refer to ths as [endpoint], so you can replace it where needed.
-* In Avola, you need to create an API account. 
-* An Avola, you need at least one decision service
+Connect to Avola in any client technology you prefer. 
 
-If you have trouble with this, contact support to help you out.
+<!--more-->
 
 ## Client authentication
 
@@ -23,8 +17,7 @@ The token can be reused and has an expiration date.
 For the correct token endpoint, call [endpoint]/api/Settings - in the response you will find the [authority] and [tokenendpoint] you need. **Remark:** you don't need to put https:// in front of the [authority] endpoint, just the base url.
 
 Then, request a token, for the scope 'avola-api-client':
-
-```json
+```
 POST [tokenendpoint] HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 Host: [authority]
@@ -32,6 +25,7 @@ Content-Length: 171
 
 grant_type=client_credentials&client_id=YOURCLIENTID&client_secret=YOURSECRET&scope=avola-api-client
 ```
+
 The response looks like this, save the token.
 
 ```json 
@@ -44,7 +38,7 @@ The response looks like this, save the token.
 
 ## Get a list of decision services
 
-```json
+```
 GET [endpoint]/api/ApiExecution/decisions/list HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer TOKENSTRING
@@ -164,7 +158,7 @@ This will you return you a list of decision services, each with a list of decisi
 This is a fairly simple request. The body of this POST has the DecisionServiceId and VersionNumber, which we got form the object above. It has an optional Reference which is returned identically.
 The input data goes in the ExecutionRequestData array. for each input data you provide a key (the BusinessDataId) and a value (the actual value, always represented as a string)
 
-```json
+```
 POST [endpoint]/api/ApiExecution/execute HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer TOKENSTRING

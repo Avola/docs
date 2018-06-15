@@ -16,8 +16,8 @@ showVisitedLinks = true # default is false
 themeStyle = "flex" # "original" or "flex" # default "flex"
 # themeVariant = "blue" # choose theme variant "green", "gold" , "gray", "blue" (default)
 ordersectionsby = "weight" # ordersectionsby = "title"
-disableHomeIcon = false # default is false
-disableSearch = false # default is false
+disableHomeIcon = true # default is false
+disableSearch = true # default is false
 disableNavChevron = true # set true to hide next/prev chevron, default is false
 highlightClientSide = false # set true to use highlight.pack.js instead of the default hugo chroma highlighter
 menushortcutsnewtab = true # set true to open shortcuts links to a new tab/window
@@ -39,5 +39,5 @@ weight = 20
 
 [[menu.shortcuts]]
 name = "<i class='fa fa-external-link-square'></i> Avola Website"
-url = "http://www.avo.la"
+url = "http://www.avo.la?utm_source=docs&utm_medium=website"
 weight = 30

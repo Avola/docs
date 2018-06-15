@@ -1,0 +1,12 @@
+header::after {
+    background: none;
+    border-bottom: .35rem solid #f07d1a;
+}
+
+article > aside .menu .dd-item.active > div * {
+    border-bottom-color: #f07d1a;
+}
+
+article section.page h1:first-of-type {
+    text-align: left;
+}

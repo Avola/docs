@@ -6,3 +6,5 @@ weight: 30
 ---
 
 The release notes can be found at https://support.avo.la but will be migrated here in the future. 
+
+If you have feature requests, please use the support portal
