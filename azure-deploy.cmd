@@ -8,9 +8,9 @@ if exist bin goto build
 md bin
 cd bin
 :install
-curl -o hugo041.zip -L https://github.com/gohugoio/hugo/releases/download/v0.41/hugo_0.41_Windows-64bit.zip
+curl -o hugo.zip -L https://github.com/gohugoio/hugo/releases/download/v0.42.1/hugo_0.42.1_Windows-64bit.zip
 echo Installing Hugo...
-SetLocal DisableDelayedExpansion & d:\7zip\7za x hugo041.zip
+SetLocal DisableDelayedExpansion & d:\7zip\7za x hugo.zip
 
 
 REM Generate Hugo static site from source on GitHub
