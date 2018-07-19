@@ -7,6 +7,6 @@ aliases:
     - /api/getting-started/
 ---
 
-It is not hard to integrate Avola in your own software. 
+We want to make it as easy as possible to integrate Avola Decision in your own software. If the technology you use is not listed here, or you have trouble accessing the REST API, send us a message and we will support you.
 
 {{% children  description="true" style="h5" %}}
