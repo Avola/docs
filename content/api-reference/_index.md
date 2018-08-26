@@ -181,6 +181,7 @@ Version 2 introduces a new property 'ExecutionKey' in the result when executing.
 | Reference | string |  | No |
 | ExecutionRequestData | [ [ExecutionRequestData](#executionrequestdata) ] |  | No |
 | ExecutionRequestMetaData | [ [ExecutionRequestData](#executionrequestdata) ] |  | No |
+| FilterResult | [FilterResult](#filterresult) |  | No |
 
 ### ExecutionRequestData  
 
@@ -188,6 +189,13 @@ Version 2 introduces a new property 'ExecutionKey' in the result when executing.
 | ---- | ---- | ----------- | -------- |
 | Key | integer |  | No |
 | Value | string |  | No |
+
+
+### FilterResult  
+
+| Name | Type | Description | Required |
+| ---- | ---- | ----------- | -------- |
+| HitConclusionBusinessDataIds | [ string ] |  | No |
 
 ### ExecutionResultV2  
 
