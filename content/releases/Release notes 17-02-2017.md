@@ -1,13 +1,13 @@
 ---
-title: "Release notes 17-02-2017"
+title: "Release 17-02-2017"
 date: 2017-02-20T15:06:20+02:00
 draft: false
 weight: 300
 ---
 
-## Here are the notes for Avola Release 20170217.3
+Here are the notes for Avola Release 20170217.3
 
-### Features
+##### Features
 
 * [EXEC API] Row Expression as extra field in Row (and in hit rule in execution result) (728)
 * [EXEC API] Reference field in execution result (870)
@@ -15,7 +15,7 @@ weight: 300
 * [UI] [API] Enable archiving decision service when all versions are withdrawn, archived or abandoned (897)
 * [EXEC API] Metadata in API Decision Service Description (737)
 
-### Enhancements
+##### Enhancements
 
 * [UI] Better error handling when entering string in integer field and other way around in the quick test of a decision service version. (832)
 * [API] [UI] Better handling of list values in decision tables (895 880 900)
@@ -27,7 +27,7 @@ weight: 300
 * [UI] Better formula handling in decision table (945 946)
 * [UI] Better handling of calculated timespans (956)
 
-### Fixed problems
+##### Fixed problems
 
 * [API] Solved Error – “sequence contains more than…” (851)
 * [API] Send correct email when resetting password (884)
@@ -41,7 +41,7 @@ weight: 300
 * [API] Fixed memory exception when deploying some decision service versions (949)
 * [UI] Remove Dashboard items that are not functional now (933)
 
-### Known Issues
+##### Known Issues
 
 * [API] [UI] Projects cannot be closed for now. The end-of life of a projects requires various checks and reassignments of decision and version objects.
 * [UI] Date and time picker is not user friendly and does not take business data precision in account. Will be replaced in next release.
