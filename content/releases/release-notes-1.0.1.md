@@ -1,11 +1,11 @@
 ---
-title: "Release 05-03-2017"
-date: 2017-03-05T15:06:20+02:00
+title: "Release notes 1.0.1"
+date: 2017-03-05
 draft: false
 weight: 290
 ---
 
-Release notes for version 20170305.1
+Released on 05/03/2017
 
 ##### Enhancements
 

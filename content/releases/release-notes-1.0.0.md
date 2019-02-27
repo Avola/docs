@@ -1,11 +1,11 @@
 ---
-title: "Release 17-02-2017"
+title: "Release notes 1.0.0"
 date: 2017-02-20T15:06:20+02:00
 draft: false
 weight: 300
 ---
 
-Here are the notes for Avola Release 20170217.3
+Released on 20/02/2017
 
 ##### Features
 
