@@ -5,7 +5,7 @@ draft: false
 weight: 150
 ---
 
-Avola 1.6.3-20180206.2 was released in February 7, 2018
+Avola 1.6.3-20180206.2 was released on February 7, 2018
 
 ##### Fixes and enhancements
 
